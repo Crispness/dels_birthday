@@ -4,7 +4,7 @@
  <meta charset="utf-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1"/>
  <meta name="robots" content="noindex, nofollow"/>
- <title>Group Photo</title>
+ <title>Del's 90th Birthday Party Group Photo</title>
  <style>
   body {
     font-family: sans-serif;
@@ -55,6 +55,26 @@
   margin: 0.25em 0;
 }
 
+/* Tablets */
+@media (max-width: 1024px) {
+  .people-grid {
+    columns: 4;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .people-grid {
+    columns: 2;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .people-grid {
+    columns: 1;
+  }
+}
 .people-grid li:hover {
   text-decoration: underline;
 }
@@ -644,11 +664,25 @@ document.addEventListener('DOMContentLoaded', () => {
       tooltip.style.opacity = '1';
     });
 
-    path.addEventListener('mousemove', e => {
-      tooltip.style.left = (e.clientX + 12) + 'px';
-      tooltip.style.top  = (e.clientY + 12) + 'px';
-    });
+path.addEventListener('mousemove', e => {
+  const padding = 12;
+  const tooltipRect = tooltip.getBoundingClientRect();
 
+  let x = e.clientX + padding;
+  let y = e.clientY + padding;
+
+  // keep inside viewport
+  if (x + tooltipRect.width > window.innerWidth) {
+    x = window.innerWidth - tooltipRect.width - padding;
+  }
+
+  if (y + tooltipRect.height > window.innerHeight) {
+    y = window.innerHeight - tooltipRect.height - padding;
+  }
+
+  tooltip.style.left = x + 'px';
+  tooltip.style.top  = y + 'px';
+});
     path.addEventListener('mouseleave', () => {
       path.classList.remove('active');
       tooltip.style.opacity = '0';
