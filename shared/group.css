@@ -1,0 +1,86 @@
+  body {
+    font-family: sans-serif;
+    margin: 1em;
+  }
+
+  /* SVG scaling */
+  image { pointer-events: none; }
+#svg-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+#group-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+  /* Headshape style */
+.person {
+  fill: transparent;
+  stroke: red;
+  stroke-width: 1.5;
+  opacity: 0; /* hidden by default */
+  pointer-events: all;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.person.active {
+  opacity: 1; /* visible when active */
+  fill: rgba(255, 0, 0, 0.3);
+}
+
+ /* People list: 8-column numbered grid */
+.people-grid {
+  list-style: decimal;
+  columns: 8;
+  column-gap: 2em;
+  padding-left: 1.5em;
+  margin-top: 1em;
+}
+
+.people-grid li {
+  break-inside: avoid;
+  cursor: pointer;
+  margin: 0.25em 0;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .people-grid {
+    columns: 4;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .people-grid {
+    columns: 2;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .people-grid {
+    columns: 1;
+  }
+}
+.people-grid li:hover {
+  text-decoration: underline;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 1000;
+}
