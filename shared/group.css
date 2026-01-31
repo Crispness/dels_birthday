@@ -21,10 +21,20 @@
   pointer-events: auto;
 }
 
-#group-photo {
+.photo {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.photo-area {
+  position: relative;
+}
+
+.photo-area img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
   /* Headshape style */
