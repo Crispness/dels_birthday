@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic HTML meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Interactive labelled group photo. Hover over people to see names.">
+        <meta name="author" content="Feargal Hogan">
+        <meta name="robots" content="noindex,nofollow">
+        
+        
+        <!-- Dublin Core metadata -->
+        <meta name="DC.title" content="Photo taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children">
+        <meta name="DC.creator" content="Feargal Hogan">
+        <meta name="DC.contributor" content="Eugene Hogan - photographer - Noreen Coyle and Bairbre o'Hogan - indexing">
+        <meta name="DC.description" content="Interactive labelled group photograph taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children.">
+        <meta name="DC.subject" content="family gathering picnic, multi-generational, group photo, 2002, employees">
+        <meta name="DC.date" content="2002-05-18">
+        <meta name="DC.type" content="Image">
+        <meta name="DC.format" content="text/html">
+        <meta name="DC.language" content="en-IE">
+        <meta name="DC.coverage" content="Marlay Park, Dublin">
+        <meta name="DC.identifier" content="picnic-2024-group-photo">
+        <meta name="DC.rights" content="Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Non-commercial use only.">
+        
+        <!-- Dublin Core terms (optional refinements) -->
+        <meta name="dcterms.rightsHolder" content="Feargal Hogan, Eugene Hogan">
+        <meta name="dcterms.license" content="https://creativecommons.org/licenses/by-nc/4.0/">
+        
+        <!-- Creative Commons machine-readable licence link -->
+        <link rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <title>Photo taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children</title>        
+        <!-- shared styles -->
+        <link rel="stylesheet" href="../shared/group.css" />
+    </head>
+    
+    <body>
+        
+        <main class="layout">
+            
+            <!-- ============================= -->
+            <!-- Photo + SVG overlay           -->
+            <!-- ============================= -->
+            <section class="photo-area">
+                
+                <!-- local photo -->
+                <img src="group.jpg" alt="Group photo" class="photo" />
+                
+                <!-- inline SVG (paste Inkscape paths here) -->
+                <svg id="people-svg"
+                    viewBox="0 0 2000 1200"
+                    preserveAspectRatio="xMidYMid meet">
+                    
+                    <!-- ===================================== -->
+                    <!-- PASTE YOUR INKSCAPE PATHS BELOW       -->
+                    <!-- example:                              -->
+                    <!-- <path id="curve1" d="..." />   
+                        add class="person"                     -->
+                    <!-- ===================================== -->
+                    
+                </svg>
+                
+            </section>
+            
+            
+            <!-- ============================= -->
+            <!-- Name index sidebar            -->
+            <!-- each li should reference its  -->
+            <!-- associated datapath e.g.      -->
+            <!-- <li data-path="path1"></li>   -->
+            <!-- ============================= -->
+            <aside class="sidebar">
+                <h2>People</h2>
+                <ul id="name-list"></ul>
+            </aside>
+            
+        </main>
+        
+        
+        <!-- ============================= -->
+        <!-- Floating tooltip              -->
+        <!-- ============================= -->
+        <div id="tooltip"></div>
+        
+        
+
+        
+        
+        <!-- shared behavior -->
+        <script src="../shared/group.js"></script>
+        
+    </body>
+</html>
