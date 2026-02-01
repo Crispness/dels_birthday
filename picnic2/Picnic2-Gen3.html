@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Interactive labelled group photo. Hover over people to see names.">
         <meta name="author" content="Feargal Hogan">
-        <meta name="robots" content="noindex,nofollow">
+        <meta name="robots" content="noindex,nofollow"> 
         
         
         <!-- Dublin Core metadata -->
         <meta name="DC.title" content="Photo taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children">
         <meta name="DC.creator" content="Feargal Hogan">
         <meta name="DC.contributor" content="Eugene Hogan - photographer - Noreen Coyle and Bairbre o'Hogan - indexing">
-        <meta name="DC.description" content="Interactive labelled group photograph taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 2nd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children.">
+        <meta name="DC.description" content="Interactive labelled group photograph taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children.">
         <meta name="DC.subject" content="family gathering picnic, multi-generational, group photo, 2002, employees">
         <meta name="DC.date" content="2002-05-18">
         <meta name="DC.type" content="Image">
@@ -37,9 +37,9 @@
     
     <body>
         
-        <h1>2nd Hogan Picnic - Second Generation people</h1>
+        <h1>2nd Hogan Picnic - Third Generation people</h1>
         <p>This is one of the group photos taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park, Dublin.</p>
-        <p> These are the 2nd generation of 'Hogans' present, i.e. grandchildrenchildren of John J Hogan and May Kennedy</p>
+        <p> These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children</p>
         <p>We hope that we have correctly identified everyone in the photo and spelled all the names correctly, but if not <a href="mailto:feargal.hogan@gmail.com?subject=Error%20on%20Picnic2-Gen3.jpg">please email me</a></p> 
         <p>Either click on one of the names in the list below, or just hover over a face.</p>
         <p>On a phone or tablet you may have to touch a face!</p>
@@ -57,10 +57,9 @@
                 
 
                 <!-- inline SVG (paste Inkscape paths here) -->
-                <svg
-                    width="1728"
-                    height="1152"
-                    viewBox="0 0 1728 1152">
+                <svg id="people-svg"
+                    viewBox="0 0 1728 1152"
+                    style="width:100%; height:auto; display:block;">
                     <image href="Picnic2-Gen3.jpg" id="group-photo"
                         class="group-photo"
                         width="1728"
@@ -71,12 +70,9 @@
                     <!-- ===================================== -->
                     <!-- PASTE YOUR INKSCAPE PATHS BELOW        -->
                     <!-- example:                              -->
-                    <!-- 
-<path class="person"  class="person"  class="person"  id="curve1" d="..." />            -->
+                    <!-- <path class="person"  class="person"  id="curve1" d="..." />            -->
                     <!-- ===================================== -->
-
                     <g id="g1">
-                        
                         <path class="person" 
                             style="fill:#000000;fill-opacity:0.465426;stroke:#ffffff;stroke-width:2.0517;stroke-dasharray:none;stroke-opacity:1"
                             d="m 236.98368,447.16297 c -4.53018,2.40154 -1.26378,7.91501 -0.10119,1.03557 -6.43976,6.76446 -4.71769,16.4423 -7.60717,24.73726 -1.94406,11.71455 -8.7586,21.99602 -10.30607,33.78966 -1.9625,7.91379 -1.54725,16.9103 -4.80674,24.70806 -4.99435,8.04959 -14.10456,11.64028 -21.31347,16.95875 -9.35751,7.134 -1.8567,16.15343 5.84317,20.33525 9.3275,3.38615 6.54933,11.50692 9.93246,18.94625 -0.26113,9.91699 3.60204,19.27008 1.20301,29.17154 -3.09996,7.87668 -8.60395,13.34473 -10.34236,21.93449 -3.43553,6.07667 -6.60679,15.73457 -5.8145,23.45027 -2.23305,9.19891 -0.27218,19.35208 9.23846,23.4466 5.59088,4.37619 15.97261,2.36123 21.01116,-0.62287 -2.04165,-8.54498 -12.88382,-12.84405 -10.42116,-23.32012 1.61133,-13.5285 12.64706,-23.49487 14.32341,-37.005 2.13506,-10.57267 7.40967,-20.53159 14.47173,-28.63998 2.44282,-8.44721 4.78381,-16.92809 6.17682,-25.44789 2.31122,-9.64632 7.92867,-17.5515 11.53042,-26.52935 5.4146,-7.61019 18.27691,5.12946 22.27227,-3.71963 5.12678,-6.97342 5.05868,-14.34465 0.68511,-21.52034 -2.45388,-7.57496 -7.20332,-14.02832 -9.03112,-21.78956 -3.33137,-9.62812 7.05019,-18.34972 2.34977,-28.13463 -2.7192,-8.25715 -4.74351,-17.98344 -12.46567,-23.06183 -8.83559,-3.35115 -19.2321,-10.2624 -25.84174,0.47108 l -0.98654,0.80648 z"
@@ -165,7 +161,8 @@
                             style="fill:#000000;fill-opacity:0.465426;stroke:#ffffff;stroke-width:2.05169;stroke-dasharray:none;stroke-opacity:1"
                             d="m 1365.0491,539.14567 c 10.1274,-4.69332 1.3233,-7.40804 0,0 11.8274,-8.70933 19.5776,-14.23345 29.5552,-19.69708 11.3083,-0.3693 -4.4024,-9.6533 -1.4494,-14.79642 -4.2747,-9.31272 -3.1281,-22.83908 2.5551,-28.10584 3.4655,-10.37342 3.81,-13.58126 13.3425,-19.02605 4.7336,-6.67972 23.4982,-1.51776 28.8163,8.80576 4.7351,8.24761 6.3653,22.12205 7.6652,31.93843 5.8545,10.27978 20.5738,15.00113 25.5507,28.10584 9.4645,6.77528 11.1063,17.34765 15.7791,25.52024 7.3084,14.8982 5.6553,33.69022 3.1744,50.47368 -2.8294,18.77515 5.2718,36.28227 2.825,54.91993 -2.0625,10.02674 -0.2367,26.59181 -6.9516,33.91296 -5.2828,8.96477 -3.6891,18.598 -5.812,31.29613 -4.0903,11.57136 -0.4385,24.97966 -1.3496,37.32086 -0.069,13.51153 0.3332,27.04295 -0.6894,40.51649 5.8432,15.83182 -3.7871,33.15993 -3.1433,49.25665 -5.9223,14.648 3.8987,28.15994 1.2776,40.88121 -0.8168,12.98903 3.9884,31.92883 -8.9428,37.04857 -12.2681,6.97429 -31.402,5.69353 -46.5346,5.98048 -13.6992,-2.27597 -35.673,5.70854 -36.5053,-11.09063 -5.5399,-1.95575 -4.0479,-20.08051 -4.3254,-27.58672 2.0532,-15.00195 -0.5246,-30.3254 -0.7848,-45.23291 -4.9351,-6.87065 -5.4674,-22.04283 -6.5352,-33.12735 -1.8159,-18.72758 -3.6012,-39.15669 0.6413,-57.07273 -0.8488,-15.90951 2.3751,-30.55274 2.5828,-46.22794 -1.801,-15.37021 1.5862,-34.31436 -1.799,-47.53737 -1.5382,-8.38463 -9.6615,-10.97355 -14.0529,-19.16306 -1.0789,-14.19134 -5.5605,-22.003 -3.1533,-36.56341 -0.9233,-14.64626 -8.4631,-24.24193 -7.0087,-38.82851 2.8162,-11.04073 5.8379,-19.14114 13.298,-29.39801 z"
                             id="path22" />
-                    </g>                </svg>
+                    </g>
+                </svg>
                 
             </div>
             
@@ -175,38 +172,30 @@
             <!-- ============================= -->
             <aside class="sidebar">
                 <h2>In this photo ...</h2>
-                <p>These are the 2rd generation of 'Hogans' present at the 2nd Hogan Family picnic, i.e. children of John J Hogan and May Kennedy's children (and the O'Kennedy's ;-)).</p>
+                <p>These are the 3rd generation of 'Hogans' present at the 2nd Hogan Family picnic, i.e. grandchildren of John J Hogan and May Kennedy's children.</p>
                 <ul id="people" class="people-grid">
-                    <li data-path="path1">Shane</li>
-                    <li data-path="path2">Enda</li>
-                    <li data-path="path3">Dara (the younger)</li>
-                    <li data-path="path4">Paul</li>
-                    <li data-path="path5">Aidan O</li>
-                    <li data-path="path6">Niall</li>
-                    <li data-path="path7">Finbar</li>
-                    <li data-path="path8">Gay</li>
-                    <li data-path="path9">Leo</li>
-                    <li data-path="path10">Rosie</li>
-                    <li data-path="path11">Denis</li>
-                    <li data-path="path12">Bairbre</li>
-                    <li data-path="path13">Donough</li>
-                    <li data-path="path14">Maeve</li>
-                    <li data-path="path15">Gearóid</li>
-                    <li data-path="path16">Noreen C</li>
-                    <li data-path="path17">Dierdre</li>
-                    <li data-path="path18">Rory</li>
+                    <li data-path="path1">Kate</li>
+                    <li data-path="path2">Cillian</li>
+                    <li data-path="path3">Gráinne</li>
+                    <li data-path="path4">Oisín</li>
+                    <li data-path="path5">Neasa</li>
+                    <li data-path="path6">Ciara</li>
+                    <li data-path="path7">7</li>
+                    <li data-path="path8">8</li>
+                    <li data-path="path9">Aidan</li>
+                    <li data-path="path10">Elaine</li>
+                    <li data-path="path11">Tom</li>
+                    <li data-path="path12">Cathal</li>
+                    <li data-path="path13">Cian</li>
+                    <li data-path="path14">Eoin</li>
+                    <li data-path="path15">Linda</li>
+                    <li data-path="path16">Stephen</li>
+                    <li data-path="path17">Ciaran</li>
+                    <li data-path="path18">18</li>
                     <li data-path="path19">19</li>
                     <li data-path="path20">20</li>
-                    <li data-path="path21">21</li>
-                    <li data-path="path22">22</li>
-                    <li data-path="path23">Carmel</li>
-                    <li data-path="path24">Mick</li>
-                    <li data-path="path25">Dara</li>
-                    <li data-path="path26">Feargal</li>
-                    <li data-path="path27">Marty</li>
-                    <li data-path="path28">Eugene</li>
-                    <li data-path="path29">Frank</li>
-                    <li data-path="path30">30</li>
+                    <li data-path="path21">Sarah</li>
+                    <li data-path="path22">Susan</li>
                 </ul>
             </aside>
             
