@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Basic HTML meta -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Interactive labelled group photo. Hover over people to see names.">
-        <meta name="author" content="Feargal Hogan">
-        <meta name="robots" content="noindex,nofollow">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         
+        <title>Photo title here</title>
         
-        <!-- Dublin Core metadata -->
-        <meta name="DC.title" content="Photo taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children">
-        <meta name="DC.creator" content="Feargal Hogan">
-        <meta name="DC.contributor" content="Eugene Hogan - photographer - Noreen Coyle and Bairbre o'Hogan - indexing">
-        <meta name="DC.description" content="Interactive labelled group photograph taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children.">
-        <meta name="DC.subject" content="family gathering picnic, multi-generational, group photo, 2002, employees">
-        <meta name="DC.date" content="2002-05-18">
-        <meta name="DC.type" content="Image">
-        <meta name="DC.format" content="text/html">
-        <meta name="DC.language" content="en-IE">
-        <meta name="DC.coverage" content="Marlay Park, Dublin">
-        <meta name="DC.identifier" content="picnic-2024-group-photo">
-        <meta name="DC.rights" content="Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Non-commercial use only.">
+        <!-- ============================= -->
+        <!-- Dublin Core metadata          -->
+        <!-- ============================= -->
         
-        <!-- Dublin Core terms (optional refinements) -->
-        <meta name="dcterms.rightsHolder" content="Feargal Hogan, Eugene Hogan">
-        <meta name="dcterms.license" content="https://creativecommons.org/licenses/by-nc/4.0/">
+        <meta name="DC.title" content="Photo title here" />
+        <meta name="DC.creator" content="Feargal Hogan" />
+        <meta name="DC.contributor" content="Eugene Hogan" />
+        <meta name="DC.contributor" content="Noreen Coyle" />
+        <meta name="DC.contributor" content="Bairbre O'Hogan" />
+        <meta name="DC.subject" content="Hogan Family group photograph" />
+        <meta name="DC.description" content="Interactive group photo with labelled people" />
+        <meta name="DC.date" content="2002-05-18" />
+        <meta name="DC.type" content="Image" />
+        <meta name="DC.format" content="image/jpeg" />
+        <meta name="DC.identifier" content="unique-photo-id" />
+        <meta name="DC.source" content="Hogan Family archive" />
+        <meta name="DC.language" content="en-IE" />
+        <meta name="DC.coverage" content="Marlay Park, Dublin" />
+        <meta name="DC.rights" content="© Family collection" />
         
-        <!-- Creative Commons machine-readable licence link -->
-        <link rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
-        <title>Photo taken on 18th May 2002 at the 2nd Hogan Family Picnic in Marlay Park. These are the 3rd generation of 'Hogans' present, i.e. grandchildren of John J Hogan's children</title>        
-        <!-- shared styles -->
+        <!-- YOUR EXISTING STYLES -->
         <link rel="stylesheet" href="../shared/group.css" />
     </head>
     
+    
     <body>
         
-        <main class="layout">
+        <h1>Photo title here</h1>
+        
+        
+        <!-- ===================================== -->
+        <!-- SVG photo (image + paths together)    -->
+        <!-- ===================================== -->
+        
+        <div class="photo-area">
             
-            <!-- ============================= -->
-            <!-- Photo + SVG overlay           -->
-            <!-- ============================= -->
-            <section class="photo-area">
+            <svg id="people-svg"
+                viewBox="0 0 1728 1152"
+                role="img"
+                aria-labelledby="photoTitle photoDesc">
                 
-                <!-- local photo -->
-                <img src="group.jpg" alt="Group photo" class="photo" />
+                <title id="photoTitle">Short description of the photo</title>
+                <desc id="photoDesc">
+                    Hover or click people to highlight them. Names listed below.
+                </desc>
                 
-                <!-- inline SVG (paste Inkscape paths here) -->
-                <svg id="people-svg"
-                    viewBox="0 0 2000 1200"
-                    preserveAspectRatio="none">
-                    
-                    <!-- ===================================== -->
-                    <!-- PASTE YOUR INKSCAPE PATHS BELOW       -->
-                    <!-- example:                              -->
-                    <!-- <path id="curve1" d="..." />   
-                        add class="person"                     -->
-                    <!-- ===================================== -->
-                    
-                </svg>
+                <!-- CHANGE ONLY THIS FILE NAME -->
+                <image href="photo.jpg"
+                    width="1728"
+                    height="1152" />
                 
-            </section>
+                <!-- PASTE INKSCAPE PATHS HERE -->
+                <g id="people">
+                    <!-- <path id="p1" class="person" d="..." /> -->
+                </g>
+                
+            </svg>
             
-            
-            <!-- ============================= -->
-            <!-- Name index sidebar            -->
-            <!-- each li should reference its  -->
-            <!-- associated datapath e.g.      -->
-            <!-- <li data-path="path1"></li>   -->
-            <!-- ============================= -->
-            <aside class="sidebar">
-                <h2>People</h2>
-                <ul id="name-list"></ul>
-            </aside>
-            
-        </main>
+        </div>
         
         
-        <!-- ============================= -->
-        <!-- Floating tooltip              -->
-        <!-- ============================= -->
-        <div id="tooltip"></div>
+        <!-- ===================================== -->
+        <!-- Names list                            -->
+        <!-- ===================================== -->
+        
+        <aside class="sidebar">
+            <ul id="people-list">
+                <!-- one li per path id -->
+                <!-- <li data-path="p1">Alice</li> -->
+            </ul>
+        </aside>
         
         
-
-        
-        
-        <!-- shared behavior -->
+        <!-- YOUR EXISTING JS -->
         <script src="../shared/group.js"></script>
         
     </body>
