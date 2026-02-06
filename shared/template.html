@@ -43,9 +43,7 @@
         <div class="photo-area">
             
             <svg id="people-svg"
-                viewBox="0 0 1728 1152"
-                role="img"
-                aria-labelledby="photoTitle photoDesc">
+                viewBox="0 0 1728 1152">
                 
                 <title id="photoTitle">Short description of the photo</title>
                 <desc id="photoDesc">
@@ -54,11 +52,13 @@
                 
                 <!-- CHANGE ONLY THIS FILE NAME -->
                 <image href="photo.jpg"
+                    id="group-photo"
+                    class="group-photo"
                     width="1728"
                     height="1152" />
                 
                 <!-- PASTE INKSCAPE PATHS HERE -->
-                <g id="people">
+                <g id="g1">
                     <!-- <path id="p1" class="person" d="..." /> -->
                 </g>
                 
@@ -72,12 +72,16 @@
         <!-- ===================================== -->
         
         <aside class="sidebar">
-            <ul id="people-list">
+            <ul id="people" class="people-grid">
                 <!-- one li per path id -->
                 <!-- <li data-path="p1">Alice</li> -->
             </ul>
         </aside>
         
+        <!-- ============================= -->
+        <!-- Floating tooltip              -->
+        <!-- ============================= -->
+        <div id="tooltip"></div>
         
         <!-- YOUR EXISTING JS -->
         <script src="../shared/group.js"></script>
