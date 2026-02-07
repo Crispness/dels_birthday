@@ -5,6 +5,58 @@
 
   /* SVG scaling */
   image { pointer-events: none; }
+/* load free web fonts */
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cardo&display=swap");
+
+:root {
+  --accent-green: #4f9b47;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-green);
+}
+
+/* first paragraph only */
+body > p:first-of-type::first-letter {
+  font-family: "Colmcille MT", "Uncial Antiqua", "Cardo", serif;
+
+  float: left;
+   font-size: 4.4em;     /* bigger */
+  line-height: 0.85;    /* keeps it squat */
+  margin-right: 0.05em;
+
+  font-weight: 700;     /* bold presence */
+
+  color: var(--accent-green);
+}
+
+
+.photo-swap {
+  float: left;              /* makes text wrap */
+  position: relative;
+
+  width: 240px;            /* set your size */
+  margin: 0 1rem 0.5rem 0; /* space between image and text */
+}
+
+.photo-swap img {
+  display: block;
+    width: 100%;
+  height: auto;
+}
+
+.photo-swap .color {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.photo-swap:hover .color {
+  opacity: 1;
+}
+
+
+
 #svg-container {
   width: 100%;
   max-width: 100%;
